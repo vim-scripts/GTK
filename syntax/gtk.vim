@@ -1,36 +1,8 @@
 " Vim syntax file
 " Language:     C gtk
 " Maintainer:   krisna
-" Last change:  2003-02-15
+" Last change:  2003-02-19
 
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-  syntax clear
-elseif exists("b:current_syntax")
-  finish
-endif
-
-" Read the C syntax to start with
-if version < 600
-  so <sfile>:p:h/c.vim
-  so <sfile>:p:h/x.vim
-  so <sfile>:p:h/glib.vim
-  so <sfile>:p:h/pango.vim
-  so <sfile>:p:h/gdk.vim
-else
-  runtime! syntax/c.vim
-  unlet b:current_syntax
-  let b:c_syntax_loaded = 1
-  runtime! syntax/xlib.vim
-  unlet b:current_syntax
-  runtime! syntax/glib.vim
-  unlet b:current_syntax
-  runtime! syntax/pango.vim
-  unlet b:current_syntax
-  runtime! syntax/gdk.vim
-  unlet b:current_syntax
-endif
 
 " gtk.h
 
@@ -3938,5 +3910,4 @@ if version >= 508 || !exists("did_gtk_syntax_inits")
   delcommand HiLink
 endif
 
-let b:current_syntax = "gtk"
 

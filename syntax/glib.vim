@@ -1,25 +1,8 @@
 " Vim syntax file
 " Language:     C glib
 " Maintainer:   krisna
-" Last change:  2003-02-15
+" Last change:  2003-02-19
 
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-  syntax clear
-elseif exists("b:current_syntax")
-  finish
-endif
-
-" Read the C syntax to start with
-if version < 600
-  so <sfile>:p:h/c.vim
-else
-  if !exists("b:c_syntax_loaded")
-    runtime! syntax/c.vim
-    unlet b:current_syntax
-  endif
-endif
 
 " /usr/local/lib/glib-2.0/include/glibconfig.h
 syn keyword glibType		GStaticMutex
@@ -2279,5 +2262,4 @@ if version >= 508 || !exists("did_glib_syntax_inits")
   delcommand HiLink
 endif
 
-let b:current_syntax = "glib"
 
